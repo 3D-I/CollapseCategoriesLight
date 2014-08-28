@@ -7,9 +7,9 @@
 	// создаем кнопки, загружам и устанавливаем состояния категорий
 	$(".topiclist").each(function () {
 	    $(this).before(function () {
-			// для recent topics
+			// для recent topics - раскомментировать
  			// if ($(this).hasClass('topics') || $(this).hasClass('forums')) {
-		// только категории
+		// только категории - закомментировать, если включается recent topics 
  		if ($(this).hasClass('forums')) {
 			sh_i = sh_i + 1;
 			var cat_id = 'cat_' + sh_i;	// формируем имя категории
@@ -26,7 +26,7 @@
 	    });
 	});
 
-		// для recent topics
+		// для recent topics - раскомментировать
 		// $("ul.topics").wrap('<div class="collapsethis" aria-hidden="false"></div>');
 	$("ul.forums").wrap('<div class="collapsethis" aria-hidden="false"></div>');
 
