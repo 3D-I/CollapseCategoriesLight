@@ -1,18 +1,20 @@
 .collapsetrigger {
-  background: url("./images/collapse-btn.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
-  cursor: pointer;
-  float: right;
-  height: 17px;
-  margin-top: -21px;
-  position: relative;
-  width: 32px;
-  z-index: 45;
+	background: url("./images/collapse-btn.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+	cursor: pointer;
+	float: right;
+	height: 17px;
+	margin-top: -21px;
+	position: relative;
+	width: 90%;
+	z-index: 45;
 }
 
-.collapseactive {
-  background-position: left top;
-}
+.collapseactive { background-position: right top;}
+.collapseinactive { background-position: right bottom; }
 
-.collapseinactive {
-  background-position: left bottom;
+
+@media screen and (max-width: 700px) {
+	.collapseinactive { background-position: left bottom; }
+	.collapseactive { background-position: left top; }
+	.collapsetrigger { width: 32px; }
 }
