@@ -23,9 +23,9 @@
 			showhidden_triger[sh_i] = localStorage.getItem(cat_id); // загружаем состояние из локалхоста
 			if (showhidden_triger[sh_i] == null) { showhidden_triger[sh_i] = 'true' };
                 	if (showhidden_triger[sh_i] == 'false') {
-				return '<div class="trigger inactive"></div>';
+				return '<div class="trigger inactive" cat="' + cat_id +'"></div>';
 				} else {
-				return '<div class="trigger active"></div>';
+				return '<div class="trigger active" cat="' + cat_id +'"></div>';
 			}
 		}
 	    }).wrap('<div class="collapsethis" aria-hidden="false" />');
@@ -50,17 +50,17 @@
 	$('.trigger').click(function () {
 		var showhidden_triger_this = $(this).next().attr('aria-hidden');
 		if (showhidden_triger_this == "false") {
-			$(this).next().attr('aria-hidden', 'true').slideUp(300, 'easeOutQuart', function() {
+			$(this).next().attr('aria-hidden', 'true').slideUp(500, 'easeInQuart', function() {
 				$(this).parents('div.forabg').animate({
-					opacity: '0.4'
+					opacity: '0.3'
 					}, 1000)
 				});
 			$(this).removeClass('active').addClass('inactive');
 		} else {
             		$(this).parents('div.forabg').animate({
                			 	opacity: '1.0'
-            			}, 100, function() {
-                			$('.trigger', this).next().attr('aria-hidden', 'false').slideDown(300, 'easeOutQuad')
+            			}, 50, function() {
+                			$('.trigger', this).next().attr('aria-hidden', 'false').slideDown(250, 'easeOutQuad')
             		});
  
 			$(this).removeClass('inactive').addClass('active');
