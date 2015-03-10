@@ -69,6 +69,12 @@
 	});
 
 
+	$('div.forabg').on('mouseenter mouseleave', '.trigger.inactive', function(event) {
+		var time = 200, opacity = event.type == 'mouseenter' ?  '1.0' : (time = 0,'0.3');
+		$(event.delegateTarget).stop(true).delay(time).animate({ opacity: opacity }, 300)
+	})
+
+
 // ]]>
 </script>
 
