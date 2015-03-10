@@ -1,4 +1,4 @@
-.collapsetrigger {
+.trigger {
 	background: url("./images/collapse-btn.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
 	cursor: pointer;
 	float: right;
@@ -9,8 +9,8 @@
 	z-index: 1;
 }
 
-.collapseactive { background-position: right top;}
-.collapseinactive { background-position: right bottom; }
+.active { background-position: right top;}
+.inactive { background-position: right bottom; }
 
 
 @media screen and (max-width: 700px) {
